@@ -1,0 +1,16 @@
+-- User --
+id = int
+first_name = string
+last_name = string
+gender = string
+phone_number = string
+
+-- Room --
+id = int
+name = string
+capacity = int
+
+RoomUser
+UserId = int
+RoomId = int
+date = dateonly
