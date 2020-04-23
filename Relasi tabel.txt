@@ -10,7 +10,7 @@ id = int
 name = string
 capacity = int
 
-RoomUser
+-- RoomUser --
 UserId = int
 RoomId = int
 date = dateonly
