@@ -1,0 +1,23 @@
+<%- include('partials/header')  %>
+
+<h1>Add New Room/h1><br>
+<% if(alert.msg) { %>
+    <%= alert.msg %>
+<% } %>
+
+<form action="/room/add" method="POST">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="add new room">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Capacity</label>
+        <input type="text" class="form-control" name="capacity" placeholder="add the capacity of the room">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <a class="btn btn-danger" href="/room" role="button">Cancel</a>
+    </div>
+  </form>
+
+  <%- include('partials/footer')  %>

@@ -1,6 +1,11 @@
 <%- include('partials/header')  %>
 
 <h1>Ini Daftar Rooms/h1><br>
+    <% if(alert.msg) { %>
+        <%= alert.msg %>
+    <% } %><br>
+
+    <a class="btn btn-success" href="/room/add" role="button">Add Rooms/a>
     
     <% if (data) { %>
         <table class="table">
@@ -8,13 +13,16 @@
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Capacity</th>
+                <th scope="col" colspan="2">Action</th>
               </tr>
             </thead>
             <% for (let i = 0;i<data.length; i++) { %>
                 <tbody>
                   <tr>
-                    <td><%= data[i].namee %></td>
+                    <td><%= data[i].name %></td>
                     <td><%= data[i].capacity%></td>
+                    <td><a class="btn btn-info" href="/room/edit/<%= data[i].id %>" role="button">Edit</a></td>
+                    <td><a class="btn btn-info" href="/room/delete/<%= data[i].id %>" role="button">Delete</a></td>
                   </tr>
                 </tbody>
             <% } %>
