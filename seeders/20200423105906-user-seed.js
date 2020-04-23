@@ -13,12 +13,16 @@ module.exports = {
           last_name: 'Budiman',
           gender: 'Male',
           phone_number: '082282547715',
+          email: 'budigaul@gmail.com',
+          password: 'budigaul123',
           createdAt: new Date(),
           updatedAt: new Date()
         },{
           first_name: 'Rini',
           last_name: 'Wati',
           gender: 'Female',
+          email: 'riniwati@gmail.com',
+          password: 'rinigaul123',
           phone_number: '082282547715',
           createdAt: new Date(),
           updatedAt: new Date()

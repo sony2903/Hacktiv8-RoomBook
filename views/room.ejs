@@ -1,0 +1,32 @@
+<%- include('partials/header')  %>
+
+<div class="container">
+    <br>
+    <h2 class="text-center">Room List</h2>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Capacity</th>
+                <th scope="col">See Photo</th>
+                <th scope="col" colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item =>{ %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <td><%= item.capacity %> Person</td>
+                    <td><a href="/images/<%=item.path_photos%>" target="_blank">
+                        <img width="220" height="250" border="0" align="center"  src="/images/<%=item.path_photos%>" class="img-thumbnail"/>
+                      </a></td>
+                    <td><a href="/room/<%= item.id %>/edit">Edit</a> | <a href="/room/<%= item.id %>/delete">Delete</a> | <a href="/addPhoto/<%= item.id %>">Add Photo</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    &nbsp;<a class="btn btn-primary" href="/room/add" role="button">Add Room</a>
+</div>
+
+<%- include('partials/footer')  %>

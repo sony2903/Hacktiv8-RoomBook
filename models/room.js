@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   Room.init({
     name: DataTypes.STRING,
     capacity: DataTypes.INTEGER,
+    path_photos: DataTypes.INTEGER,
     createdAt: new Date(),
     updatedAt: new Date()
   }, {sequelize})
@@ -18,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   // }, {});
   Room.associate = function(models) {
     // associations can be defined here
+    Room.belongsToMany(models.User,{through: models.RoomUser})
   };
   return Room;
 };

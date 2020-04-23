@@ -1,0 +1,30 @@
+<%- include('partials/header')  %>
+
+<div class="container">
+    <br>
+    <h2 class="text-center">Booking Information</h2>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Borrower</th>
+                <th scope="col">Room Name</th>
+                <th scope="col">Date</th>
+                <!-- <th scope="col" colspan="2">Action</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(data => { %>
+                <% data.Rooms.forEach(data2 => { %>
+            <tr>
+                <td> <%= data.first_name + ' ' + data.last_name %> </td>
+                <td> <%= data2.name %></td>
+                <td> <%= data2.RoomUser.date %></td>
+            </tr>
+            <% }) %>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('partials/footer')  %>

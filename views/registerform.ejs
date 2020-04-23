@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <div class="container">
+        <br>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">First Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="first_name">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="last_name">
+              </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Phone Number</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"name="phone_number">
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Re-enter Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="passwordConfirm">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio1" value="Male" name="gender">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineRadio2" value="Female" name="gender">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+              </div>
+              <br><br>
+            <button type="submit" class="btn btn-primary">Register</button> &nbsp; <a class="btn btn-secondary" href="/" role="button">Back</a>
+          </form>
+    </div>
+</body>
+</html>

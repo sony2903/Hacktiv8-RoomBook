@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   RoomUser.init({
     UserId: DataTypes.INTEGER,
     RoomId: DataTypes.INTEGER,
-    date: DataTypes.DATEONLY,
+    date: DataTypes.INTEGER,
     createdAt: new Date(),
     updatedAt: new Date()
   },{sequelize})
